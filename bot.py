@@ -39,23 +39,13 @@ logger = logging.getLogger(__name__)
 with open("questions.json", encoding="utf-8") as f:
     ALL_QUESTIONS = json.load(f)
 
-# Темы (по диапазонам вопросов из файла)
+# Темы (по номерам вопросов)
 TOPICS = {
-    "🌐 Модель OSI/TCP-IP и атаки L2-L4": list(range(0, 33)),
-    "🔒 VPN и IPsec": list(range(34, 67)),
-    "🔑 SSH, FTP, Brute Force": list(range(67, 100)),
-    "🔍 Wireshark и анализ трафика": list(range(100, 133)),
-    "🧱 Файрвол и iptables": list(range(133, 166)),
-    "🚨 IDS/IPS (Snort, Suricata)": list(range(166, 200)),
-    "📊 SIEM, SOC, ELK Stack": list(range(200, 232)),
-    "💥 DDoS и ботнеты": list(range(232, 266)),
-    "📶 Wi-Fi безопасность": list(range(266, 300)),
-    "🔐 TLS/PKI и криптография": list(range(300, 334)),
-    "🌍 DNS и безопасность DNS": list(range(334, 367)),
-    "🛡️ Реагирование на инциденты": list(range(367, 400)),
-    "🏖️ Sandbox и анализ malware": list(range(400, 433)),
-    "📧 Email безопасность": list(range(433, 466)),
-    "⚔️ Пентест и инструменты": list(range(466, 500)),
+    "📚 Вопросы 1–100":   list(range(0, 100)),
+    "📚 Вопросы 101–200": list(range(100, 200)),
+    "📚 Вопросы 201–300": list(range(200, 300)),
+    "📚 Вопросы 301–400": list(range(300, 400)),
+    "📚 Вопросы 401–500": list(range(400, 500)),
 }
 
 
