@@ -27,7 +27,7 @@ from telegram.ext import (
     CallbackQueryHandler, ContextTypes
 )
 
-TOKEN = "ВАШ_ТОКЕН_ЗДЕСЬ"  # ← вставь токен от @BotFather
+TOKEN = "8883426873:AAGNw52M5bHp524pZRX5POft7ITpAEZ_5Bg"  # ← вставь токен от @BotFather
 
 logging.basicConfig(
     format="%(asctime)s - %(name)s - %(levelname)s - %(message)s",
