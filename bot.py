@@ -27,7 +27,7 @@ from telegram.ext import (
     CallbackQueryHandler, ContextTypes
 )
 
-TOKEN = "8883426873:AAGNw52M5bHp524pZRX5POft7ITpAEZ_5Bg"  # ← вставь токен от @BotFather
+TOKEN = "ВАШ_ТОКЕН_ЗДЕСЬ"  # ← вставь токен от @BotFather
 
 logging.basicConfig(
     format="%(asctime)s - %(name)s - %(levelname)s - %(message)s",
@@ -309,18 +309,7 @@ async def poll_answer_handler(update: Update, context: ContextTypes.DEFAULT_TYPE
 
 # ── Запуск ─────────────────────────────────────────────────────────────────────
 def main():
-    # Прокси для обхода блокировки Telegram в Казахстане
-    # Если есть свой прокси — замени адрес ниже
-    # Если используешь VPN — можно убрать строки proxy и оставить только .token(TOKEN)
-    proxy_url = "http://104.207.36.46:3128"  # публичный прокси (замени на свой если не работает)
-
-    app = (
-        ApplicationBuilder()
-        .token(TOKEN)
-        .proxy(proxy_url)
-        .get_updates_proxy(proxy_url)
-        .build()
-    )
+    app = ApplicationBuilder().token(TOKEN).build()
 
     app.add_handler(CommandHandler("start", cmd_start))
     app.add_handler(CommandHandler("stop", cmd_stop))
